@@ -1,16 +1,21 @@
 import java.util.HashMap;
-import java.util.ArrayList;
+
 public class Colegio {
-	private HashMap<String, ArrayList<Grado>> niveles = new HashMap<>();
+	private HashMap<String, HashMap<String,Grado>> niveles = new HashMap<>();
 	
 	public void agregarNivel(String nombre ) {
-		niveles.put(nombre, null);
+		HashMap<String,Grado> a = new HashMap<>();
+		niveles.put(nombre, a);
+	}
+	public void agregarGrado(String nivel, String nombre) {
+		Grado g = new Grado();
+		niveles.get(nivel).put(nombre, g);
 	}
 
 	/**
 	 * @return the niveles
 	 */
-	public HashMap<String, ArrayList<Grado>> getNiveles() {
+	public HashMap<String,HashMap<String,Grado>> getNiveles() {
 		return niveles;
 	}
 

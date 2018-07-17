@@ -2,19 +2,25 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Grado {
-	private String nombre;
-	private HashMap<String, String> estudiantes = new HashMap<>();
-	/**
-	 * @return the nombre
-	 */
-	public String getNombre() {
-		return nombre;
+
+	private HashMap<String, String> estudiantes;
+
+	
+	public Grado() {
+		estudiantes = new HashMap<>();
 	}
+
+
 	/**
-	 * @param nombre the nombre to set
+	 * @return the estudiantes
 	 */
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	public HashMap<String, String> getEstudiantes() {
+		return estudiantes;
 	}
+
+	public void agregarEstudiante(String nombre, String codigo) {
+		estudiantes.put(nombre, codigo);
+	}
+
 	
 }
