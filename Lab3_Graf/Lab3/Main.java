@@ -94,6 +94,7 @@ public class Main {
 									tarea = scan.nextLine();
 									try {
 										listas.completarTarea(lista, tarea);
+										System.out.println("Tarea completada exitosamente!");
 									}catch(Exception e) {
 										System.out.println("Error al completar dicha tarea.\nAsegurese de que la tarea que elijio existe.");
 									}
