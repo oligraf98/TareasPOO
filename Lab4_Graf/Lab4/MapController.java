@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 
+
+
 public class MapController {
 	private String [][] map;
 	private Robot robot;
@@ -18,8 +20,8 @@ public class MapController {
 	public void cargarMapa() {
 		rows = 0;
 		columns = 0;
-		
-		row = new Scanner(new File("src/map.txt"));
+		try {
+		row = new Scanner(new File("C:\\Users\\oliver\\Desktop\\TareasPOO\\TareasPOO\\Lab4_Graf\\Lab4\\map.txt"));
 		
 		
 		while(row.hasNextLine()){
@@ -30,6 +32,19 @@ public class MapController {
 		    }
 		}
 		map = new String[rows][columns];
+		
+		// read in the data
+		row = new Scanner(new File("C:\\Users\\oliver\\Desktop\\TareasPOO\\TareasPOO\\Lab4_Graf\\Lab4\\map.txt"));
+		for(int i = 0; i < rows; ++i){
+		    for(int j = 0; j < columns; ++j){
+		        if(row.hasNext()) {
+		            map[i][j] = row.next();
+		        }
+		    }
+		}
+		}catch(Exception e) {
+			System.out.println("Error al cargar el mapa");
+		}
 		
 	}
 	
@@ -73,7 +88,7 @@ public class MapController {
 	}
 	
 	public void process() {
-		try(BufferedReader br = new BufferedReader(new FileReader("src/programa.txt"))) {
+		try(BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\oliver\\Desktop\\TareasPOO\\TareasPOO\\Lab4_Graf\\Lab4\\programa.txt"))) {
 		    for(String line; (line = br.readLine()) != null; ) {
 		        // process the line.
 		    	switch (line) {
@@ -128,7 +143,7 @@ public class MapController {
 					}
 				}	
 			}
-		
+			return true;
 			
 		case 1:
 			for(Casilla casilla: casillas) {
@@ -147,6 +162,7 @@ public class MapController {
 					}
 				}
 			}
+			return true;
 			
 		case 2:
 			for(Casilla casilla: casillas) {
@@ -165,7 +181,7 @@ public class MapController {
 					}
 				}
 			}
-	
+			return true;
 		case 3:
 			for(Casilla casilla: casillas) {
 				if(casilla.getY() == (robot.getY()-1) && casilla.getX() == robot.getX()) {
@@ -183,7 +199,7 @@ public class MapController {
 					}
 				}
 			}
-			
+			return true;
 		}
 	}
 
