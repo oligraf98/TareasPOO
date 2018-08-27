@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="467.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControlLista">
+   <children>
+      <Button fx:id="botonRegresar2" layoutX="39.0" layoutY="41.0" mnemonicParsing="false" text="&lt;" />
+      <Label layoutX="95.0" layoutY="45.0" text="Mi Lista:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="botonAgregarArticulo" layoutX="338.0" layoutY="54.0" mnemonicParsing="false" onAction="#agregarArticulo" prefHeight="35.0" prefWidth="153.0" text="Agregar Artículo" />
+      <Label layoutX="95.0" layoutY="110.0" prefHeight="35.0" prefWidth="397.0" text="Label" />
+      <TableView layoutX="82.0" layoutY="176.0" prefHeight="183.0" prefWidth="427.0">
+        <columns>
+          <TableColumn fx:id="colArticulo" prefWidth="108.0" text="Articulo" />
+          <TableColumn fx:id="colCantidad" prefWidth="79.0" text="Cantidad" />
+            <TableColumn fx:id="colUnitario" prefWidth="64.0" text="Unitario" />
+            <TableColumn fx:id="colTotal" prefWidth="67.0" text="Total" />
+            <TableColumn fx:id="colEstado" prefWidth="108.0" text="Estado" />
+        </columns>
+      </TableView>
+      <Label layoutX="252.0" layoutY="385.0" text="Marcar como:" />
+      <Button fx:id="botonPendiente" layoutX="340.0" layoutY="381.0" mnemonicParsing="false" onAction="#pendiente" text="Pendiente" />
+      <Button fx:id="botonCompletado" layoutX="428.0" layoutY="381.0" mnemonicParsing="false" onAction="#completado" text="Completado" />
+      <Label layoutX="88.0" layoutY="420.0" text="Pendiente:" />
+      <Label fx:id="cantPendiente" layoutX="168.0" layoutY="420.0" text="Label" />
+   </children>
+</AnchorPane>
