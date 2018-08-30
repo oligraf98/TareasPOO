@@ -16,10 +16,10 @@
       </Label>
       <Label layoutX="55.0" layoutY="196.0" text="Descripción:" />
       <Label layoutX="55.0" layoutY="145.0" text="Nombre:" />
-      <TextField layoutX="168.0" layoutY="142.0" prefHeight="25.0" prefWidth="295.0" />
-      <TextField layoutX="168.0" layoutY="196.0" prefHeight="80.0" prefWidth="295.0" />
-      <Button fx:id="botonRegresar" layoutX="14.0" layoutY="60.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="36.0" text="&lt;" />
-      <Button fx:id="botonCrearLista" layoutX="256.0" layoutY="339.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="125.0" text="Crear Lista" />
+      <TextField fx:id="nombre" layoutX="168.0" layoutY="142.0" prefHeight="25.0" prefWidth="295.0" />
+      <TextField fx:id="descripcion" layoutX="168.0" layoutY="196.0" prefHeight="80.0" prefWidth="295.0" />
+      <Button fx:id="botonRegresar" layoutX="14.0" layoutY="60.0" mnemonicParsing="false" onAction="#regresar" prefHeight="25.0" prefWidth="36.0" text="&lt;" />
+      <Button fx:id="botonCrearLista" layoutX="256.0" layoutY="339.0" mnemonicParsing="false" onAction="#crearLista" prefHeight="46.0" prefWidth="125.0" text="Crear Lista" />
       <DatePicker fx:id="fecha" layoutX="169.0" layoutY="291.0" prefHeight="25.0" prefWidth="287.0" />
       <Label layoutX="74.0" layoutY="295.0" text="Fecha:" />
    </children>

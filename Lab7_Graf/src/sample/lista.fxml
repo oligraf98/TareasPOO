@@ -9,15 +9,15 @@
 
 <AnchorPane prefHeight="467.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControlLista">
    <children>
-      <Button fx:id="botonRegresar2" layoutX="39.0" layoutY="41.0" mnemonicParsing="false" text="&lt;" />
+      <Button fx:id="botonRegresar2" layoutX="39.0" layoutY="41.0" mnemonicParsing="false" onAction="#regresar2" text="&lt;" />
       <Label layoutX="95.0" layoutY="45.0" text="Mi Lista:">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
       <Button fx:id="botonAgregarArticulo" layoutX="338.0" layoutY="54.0" mnemonicParsing="false" onAction="#agregarArticulo" prefHeight="35.0" prefWidth="153.0" text="Agregar Artículo" />
-      <Label layoutX="95.0" layoutY="110.0" prefHeight="35.0" prefWidth="397.0" text="Label" />
-      <TableView layoutX="82.0" layoutY="176.0" prefHeight="183.0" prefWidth="427.0">
+      <Label fx:id="descripcionLista" layoutX="95.0" layoutY="110.0" prefHeight="35.0" prefWidth="397.0" text="Label" />
+      <TableView fx:id="tablaArticulo" layoutX="82.0" layoutY="176.0" prefHeight="183.0" prefWidth="427.0">
         <columns>
           <TableColumn fx:id="colArticulo" prefWidth="108.0" text="Articulo" />
           <TableColumn fx:id="colCantidad" prefWidth="79.0" text="Cantidad" />

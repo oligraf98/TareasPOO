@@ -23,8 +23,8 @@
       <AnchorPane prefHeight="354.0" prefWidth="436.0">
          <children>
             <Button fx:id="botonAgregarLista" layoutX="310.0" layoutY="36.0" mnemonicParsing="false" onAction="#agregarLista" text="Agregar Lista" />
-            <Button fx:id="botonEliminarLista" layoutX="327.0" layoutY="291.0" mnemonicParsing="false" onAction="#eliminarLIsta" text="Eliminar" />
-            <Button fx:id="botonEditarLista" layoutX="255.0" layoutY="291.0" mnemonicParsing="false" text="Editar" />
+            <Button fx:id="botonEliminarLista" layoutX="327.0" layoutY="291.0" mnemonicParsing="false" onAction="#eliminarLista" text="Eliminar" />
+            <Button fx:id="botonEditarLista" layoutX="255.0" layoutY="291.0" mnemonicParsing="false" onAction="#editar" text="Editar" />
             <TableView fx:id="tablaListas" layoutX="53.0" layoutY="77.0" prefHeight="200.0" prefWidth="329.0">
               <columns>
                 <TableColumn fx:id="colNombre" prefWidth="93.0" text="Nombre" />
